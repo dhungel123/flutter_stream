@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_streams/delay_on_streams.dart';
+import 'package:flutter_streams/features/broadcast_stream.dart';
+import 'package:flutter_streams/features/coutner_page.dart';
+import 'package:flutter_streams/features/single_streams.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -31,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  CounterPage(),
     );
   }
 }
